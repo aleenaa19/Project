@@ -1,11 +1,11 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        System.out.print("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
+public class Main{
+    static void test(float x){
+        System.out.print("float");
+    }
+    static void test(double x){
+        System.out.print("double");
+    }
+    public static void main(String args[]){
+        test(99.9);
     }
 }
