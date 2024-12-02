@@ -34,15 +34,20 @@ import java.util.Scanner;
         };
 
         System.out.println("Base:" +base);
-        amount=base*day;
 
-        if(day>5) {
+
+        if(day>=5) {
              discount = 0.15f;
               amount=base*day;
              amount-=amount*0.15f;
              amount+=amount*0.10f;
 
         }
+        else{
+            amount=base*day;
+            amount+=amount*0.10f;
+        }
+
 
         System.out.println("Total amount:" +amount);
     }
