@@ -14,19 +14,19 @@ public class GuessGame {
     public static void main(String[] args) {
 
 
-        int i,ran,n;
+        int randInt,currentInp;
         int points=0;
         Scanner sc = new Scanner(System.in);
 
         Random random = new Random();
 
 
-        for (i = 0; i <5; i++) {
-            ran = random.nextInt(100);
+        for (int i = 0; i <5; i++) {
+            randInt = random.nextInt(100);
 
             System.out.print("\nEnter a number:");
-            n = sc.nextInt();
-            if (n == ran) {
+            currentInp = sc.nextInt();
+            if (currentInp == randInt) {
                 points += 5;
             } else {
                 System.out.print("Try next attempt\n");
