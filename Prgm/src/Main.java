@@ -1,11 +1,6 @@
 public class Main{
-    static void test(float x){
-        System.out.print("float");
+    public static void main(String[] args){
+        System.out.print("Hello world");
     }
-    static void test(double x){
-        System.out.print("double");
-    }
-    public static void main(String args[]){
-        test(99.9);
-    }
+
 }
