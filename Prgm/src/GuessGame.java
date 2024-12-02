@@ -14,18 +14,18 @@ public class GuessGame {
     public static void main(String[] args) {
 
 
-        int i;
+        int i,n;
         int points=0;
         Scanner sc = new Scanner(System.in);
 
         Random random = new Random();
 
 
-        for (i = 0; i < 5; i++) {
+        for (i = 0; i <5; i++) {
             int ran = random.nextInt(100);
-            System.out.print("\nRandom Number:" +ran);
+
             System.out.print("\nEnter a number:");
-            int n = sc.nextInt();
+            n = sc.nextInt();
             if (n == ran) {
                 points += 5;
             } else {
