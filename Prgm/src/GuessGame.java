@@ -14,7 +14,7 @@ public class GuessGame {
     public static void main(String[] args) {
 
 
-        int i,n;
+        int i,ran,n;
         int points=0;
         Scanner sc = new Scanner(System.in);
 
@@ -22,7 +22,7 @@ public class GuessGame {
 
 
         for (i = 0; i <5; i++) {
-            int ran = random.nextInt(100);
+            ran = random.nextInt(100);
 
             System.out.print("\nEnter a number:");
             n = sc.nextInt();
