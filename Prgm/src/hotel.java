@@ -18,30 +18,31 @@ import java.util.Scanner;
         float base;float discount=0;float amount=0;
 
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of nights:");
         int day = sc.nextInt();
-        System.out.println("Enter the room type");
+        System.out.print("Enter the room type:");
+        sc.nextLine();
         String type = sc.nextLine();
         base=switch (type) {
             case "Standard" -> 500f;
             case "delux" -> 800f;
             case "suite" -> 1000f;
-
+            default -> {
+                System.out.println("Invalid room type");
+                yield 0.0f;
+            }
         };
 
         System.out.println("Base:" +base);
-        float cost=base*day;
-        System.out.println("Total amount:" +cost);
+        amount=base*day;
+
         if(day>5) {
              discount = 0.15f;
+              amount=base*day;
+             amount-=amount*0.15f;
+             amount+=amount*0.10f;
 
-            float roomCost=base*day;
-
-            float tax_rate = 10 / 100f;
-
-             amount =(tax_rate * roomCost) - discount;
         }
-            
-
 
         System.out.println("Total amount:" +amount);
     }
