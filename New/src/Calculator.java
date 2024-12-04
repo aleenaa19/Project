@@ -44,7 +44,7 @@ public class Calculator {
                     num3=num1/num2;
                     return num3;
 
-                    //break;
+
 
                 }
                 else {
@@ -63,15 +63,21 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Welcome to calculator");
-        System.out.print("Enter first number:");
-        double num1=sc.nextDouble();
-        System.out.print("Enter second number:");
+        try {
+            System.out.print("Enter first number:");
+            double num1 = sc.nextDouble();
+            System.out.print("Enter second number:");
 
-        double num2=sc.nextDouble();
-        System.out.print("Enter operator:");
-        operator op=operator.valueOf(sc.next());
-        double result=operation(num1,num2,op);
-        System.out.println(num1+" "+op.getSymbol()+"=" +result);
+            double num2 = sc.nextDouble();
+            System.out.print("Enter operator:");
+            operator op = operator.valueOf(sc.next());
+            double result = operation(num1, num2, op);
+            System.out.println(num1 + " " + op.getSymbol() +" " +num2+"=" + result);
+        }
+        catch(Exception e)
+        {
+            System.out.println("Enter valid number or operator");
+        }
 
     }
 }
