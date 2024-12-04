@@ -12,8 +12,29 @@ Take as input number of nights he/she want to stay and room type based on that
 
 
 import java.util.Scanner;
- public class hotel {
 
+public class hotel {
+
+
+        enum RoomType {
+            standard(500, "A standard room with basic facilities."),
+            deluxe(800, "A deluxe room with extra amenities and a better view."),
+            suite(1000, "A luxurious suite with premium services and more space.");
+
+            private  final float base;
+            private final String description;
+
+            RoomType(float base, String description) {
+                this.base = base;
+                this.description = description;
+            }
+
+            public float getBaseRate(){
+                return base;}
+
+            private String getDescription(){
+            return description;}
+        }
     public static void main(String[] args) {
         float base;float discount=0;float amount=0;
 
@@ -22,23 +43,28 @@ import java.util.Scanner;
         int day = sc.nextInt();
         System.out.print("Enter the room type:");
         sc.nextLine();
-        String type = sc.nextLine();
-        base=switch (type) {
-            case "Standard" -> 500f;
-            case "delux" -> 800f;
-            case "suite" -> 1000f;
-            default -> {
-                System.out.println("Invalid room type");
-                yield 0.0f;
+        String type = sc.nextLine().toLowerCase();
+         RoomType selectedRoom=null;
+        for (RoomType room : RoomType.values()) {
+            if (room.name().equals(type)) {
+                 selectedRoom = room;
+                break;
             }
-        };
+        }
+        if (selectedRoom == null) {
+            System.out.println("Invalid room type entered.");
+            return;
+        }
 
-        System.out.println("Base:" +base);
+        base=selectedRoom.getBaseRate();
+        String description=selectedRoom.getDescription();
 
-
+        System.out.print("Base rate:" +base);
+        System.out.print("\n");
+        System.out.print("Description:" +description);
         if(day>=5) {
              discount = 0.15f;
-              amount=base*day;
+             amount=base*day;
              amount-=amount*0.15f;
              amount+=amount*0.10f;
 
@@ -49,6 +75,10 @@ import java.util.Scanner;
         }
 
 
-        System.out.println("Total amount:" +amount);
+        System.out.println("\nTotal amount:" +amount);
+
     }
+
+
 }
+
