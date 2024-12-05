@@ -1,3 +1,5 @@
+package libraryManagement;
+
 abstract class LibraryItem {
     public abstract void displayDetails();
 }
@@ -10,7 +12,7 @@ class Library {
         public void addBook(Book book) {
             if (Count < MAX_ITEMS) {
                 items[Count++] = book;
-                System.out.println("Book '" + book.getTitle() + "' added to the library.");
+                System.out.println("libraryManagement.Book '" + book.getTitle() + "' added to the library.");
             } else {
                 System.out.println("Library is full. Cannot add more books.");
             }
@@ -25,12 +27,12 @@ class Library {
                     }
                 }
             }
-            System.out.println("Book with ID " + bookId + " not found.");
+            System.out.println("libraryManagement.Book with ID " + bookId + " not found.");
         }
 
         public void displayBooks() {
             System.out.println("Library Collection:");
-            for (int i = 0; i < itemCount; i++) {
+            for (int i = 0; i < Count; i++) {
                 if (items[i] != null) {
                     items[i].displayDetails();
                 }

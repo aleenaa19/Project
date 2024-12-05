@@ -1,3 +1,5 @@
+package libraryManagement;
+
 import java.util.Scanner;
 
 interface Searchable {
@@ -31,10 +33,10 @@ interface Searchable {
         public void performAction(Library library)
         {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("1. Issue Book");
-            System.out.println("2. Return Book");
+            System.out.println("1. Issue libraryManagement.Book");
+            System.out.println("2. Return libraryManagement.Book");
             System.out.println("3. View Available Books");
-            System.out.println("4. Search for Book/ Magazine");
+            System.out.println("4. Search for libraryManagement.Book/ Magazine");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -66,7 +68,7 @@ interface Searchable {
                     System.out.println("Invalid choice.");
             }
         }
-        }
+
     }
     class Visitor extends User {
         public Visitor(String name, String address, int userId) {
@@ -86,7 +88,7 @@ interface Searchable {
         @Override
         public void performAction(Library library) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("1. Add Book");
+            System.out.println("1. Add libraryManagement.Book");
             System.out.println("2. View Available Books");
 
             int choice = scanner.nextInt();

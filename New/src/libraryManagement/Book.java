@@ -1,4 +1,4 @@
-//Library Management using oop concepts
+package libraryManagement;//Library Management using oop concepts
 
 public class Book
 {
@@ -13,7 +13,7 @@ public class Book
         this.b_author = author;
         this.bookId = bookId;
         this.isIssued = true;
-
+    }
         public String getAuthor() {
         return b_author;
     }
@@ -53,19 +53,19 @@ public class Book
             return isIssued;
 
         }
-    public void issue(isIssued)
+    public void issue(int isIssued)
         {
-            if (isAvailable) {
-                System.out.println("Book not available");
+            if (isAvailable()) {
+                System.out.println("libraryManagement.Book not available");
             } else {
-                System.out.println("Book is available");
+                System.out.println("libraryManagement.Book is available");
             }
         }
     public void displayDetails(String title,String b_author,int bookId)
         {
-            System.out.println("Book id:" +bookId);
-            System.out.println("Book title:" +title);
-            System.out.println("Book author:" +b_author);
+            System.out.println("libraryManagement.Book id:" +bookId);
+            System.out.println("libraryManagement.Book title:" +title);
+            System.out.println("libraryManagement.Book author:" +b_author);
 
 
         }
