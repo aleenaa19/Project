@@ -25,6 +25,7 @@ interface Searchable {
 }
     class Member extends User implements Searchable {
         public Member(String name, String address, int userId) {
+
             super(name, address, userId);
         }
         public void performAction(Library library)
@@ -77,7 +78,7 @@ interface Searchable {
             library.displayBooks();
         }
     }
-    class Libraraian extends User{
+    class Librarian extends User{
         public Librarian(String name, String address, int userId) {
             super(name, address, userId);
         }
