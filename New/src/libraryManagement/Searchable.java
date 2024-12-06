@@ -1,5 +1,5 @@
 package libraryManagement;
 
-interface Searchable {
+public interface Searchable {
     public boolean searchItem(String Title);
 }

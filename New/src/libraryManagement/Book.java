@@ -1,11 +1,10 @@
 package libraryManagement;//Library Management using oop concepts
 
-public class Book
-{
+public class Book {
     private String b_author;
     private String title;
     private int bookId;
-    private boolean isIssued ;
+    private boolean isIssued;
     //private boolean availability;
 
     public Book(String title, String author, int bookId) {
@@ -14,12 +13,13 @@ public class Book
         this.bookId = bookId;
         this.isIssued = true;
     }
-        public String getAuthor() {
+
+    public String getAuthor() {
         return b_author;
     }
-    public void setAuthor(String b_author)
-    {
-        this.b_author=b_author;
+
+    public void setAuthor(String b_author) {
+        this.b_author = b_author;
     }
 
     public int getBookId() {
@@ -29,8 +29,8 @@ public class Book
     public void setBookId(int bookId) {
         this.bookId = bookId;
     }
-    public String getTitle()
-    {
+
+    public String getTitle() {
         return title;
 
     }
@@ -40,33 +40,31 @@ public class Book
     }
 
 
-    public boolean isAvailable()
-        {
-            return isIssued;
+    public boolean isAvailable() {
+        return isIssued;
 
-        }
-    public void issue()
-        {
-            if (isAvailable()) {
-                System.out.println("libraryManagement.Book not available");
-            } else {
-                System.out.println("libraryManagement.Book is available");
-            }
-        }
-    public void displayDetails(String title,String b_author,int bookId)
-        {
-            System.out.println("libraryManagement.Book id:" +bookId);
-            System.out.println("libraryManagement.Book title:" +title);
-            System.out.println("libraryManagement.Book author:" +b_author);
-
-
-        }
-    public void issueBook()
-    {
-        System.out.println("Book has been issued");
     }
 
+    public void issue() {
+        if (isAvailable()) {
+            System.out.println("Book not available");
+        } else {
+            System.out.println("Book is available");
+        }
+    }
 
+    public void displayDetails(String title, String b_author, int bookId) {
+        System.out.println("Book id:" + bookId);
+        System.out.println("Book title:" + title);
+        System.out.println("Book author:" + b_author);
+        System.out.println("\n");
+
+
+    }
+
+    public void issueBook(int bookId) {
+        System.out.println("Book has been issued");
+    }
 
 
 }
