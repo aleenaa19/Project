@@ -39,21 +39,13 @@ public class Book
         this.title = title;
     }
 
-   /* public void isIssued()
-        {
-            return isIssued;
 
-        }
-        public void setIssued(boolean isIssued)
-        {
-            this.isIssued=isIssued;
-        }*/
     public boolean isAvailable()
         {
             return isIssued;
 
         }
-    public void issue(int isIssued)
+    public void issue()
         {
             if (isAvailable()) {
                 System.out.println("libraryManagement.Book not available");
@@ -69,6 +61,10 @@ public class Book
 
 
         }
+    public void issueBook()
+    {
+        System.out.println("Book has been issued");
+    }
 
 
 
