@@ -17,6 +17,8 @@ class Librarian extends User {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n1. Add Book");
         System.out.println("2. View Available Books");
+        System.out.println("3.Exit");
+
 
         System.out.println("Enter choice for librarian");
         int choice = scanner.nextInt();
@@ -39,12 +41,14 @@ class Librarian extends User {
                     library.displayBooks();
                     break;
                 case 3:
-                    System.out.println("Exit");
+                    System.out.println("Exiting..");
                     break;
                 default:
                     System.out.println("Invalid choice.");
                     break;
             }
+            System.out.print("Do u want to continue librarian operations?:");
+            choice=scanner.nextInt();
         }
         while(choice!=3);
     }

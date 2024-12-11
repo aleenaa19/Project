@@ -6,19 +6,27 @@ import libraryManagement.User;
 
 import java.util.Scanner;
 
+import static libraryManagement.Library.items;
+
 class Member extends User implements Searchable {
     Scanner scanner = new Scanner(System.in);
 
     @Override
     public boolean searchItem(String Title) {
-        Book book=null;
+       /* Book book=null;
         String inp = scanner.nextLine();
         if (book.getTitle() == inp) {
             return true;
         }
         else {
             return false;
+        }*/
+        for (Book book : items) {
+            if (book.getTitle().equalsIgnoreCase(Title)) {
+                return true;
+            }
         }
+        return false;
     }
 
 
@@ -32,7 +40,8 @@ class Member extends User implements Searchable {
         System.out.println("1. Issue Book");
         System.out.println("2. Return Book");
         System.out.println("3. View Available Books");
-        System.out.println("4. Search for Book/ Magazine\n");
+        System.out.println("4. Search for Book/ Magazine");
+        System.out.println("5.Exit\n");
         System.out.print("Enter choice for Member operations:");
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -61,11 +70,18 @@ class Member extends User implements Searchable {
                         System.out.println("Item not found.");
                     }
                     break;
+                case 5:
+                    System.out.println("Exiting Member..");
+                    break;
                 default:
                     System.out.println("Invalid choice.");
             }
+
+            System.out.print("Do u want to continue Member operations?:");
+            choice=scanner.nextInt();
+
         }
-        while(choice!=4);
+        while(choice!=5);
     }
 
 }

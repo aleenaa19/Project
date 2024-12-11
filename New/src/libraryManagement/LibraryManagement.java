@@ -21,7 +21,7 @@ public class LibraryManagement {
         System.out.println("1.Member");
         System.out.println("2.Librarian");
         System.out.println("3.Visitor");
-        System.out.print("Enter option:");
+        System.out.print("Enter choice for user type:");
 
         int ch=sc.nextInt();
         sc.nextLine();
@@ -36,11 +36,20 @@ public class LibraryManagement {
                 case 3:
                     visitor.performAction(library);
                     break;
+                case 4:
+                    System.out.println("Exiting..");
+                    break;
             }
+            System.out.print("Do u want to continue:");
+            ch=sc.nextInt();
+
+
         }
-        while(ch!=3);
+        while(ch!=4);
         return;
     }
 }
+
+
 
 
