@@ -10,8 +10,8 @@ public class ExceptionHandling {
         Scanner sc = new Scanner(System.in);
         /*System.out.println("Enter number of employees:");
         int n = sc.nextInt();*/
-        String[] employee = new String[100];
-        double[] salary = new double[100];
+        String[] employee = new String[5];
+        double[] salary = new double[5];
         int i;
         for ( i = 0; i < 5; i++) {
             try {
