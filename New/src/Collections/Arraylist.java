@@ -1,3 +1,5 @@
+package Collections;
+
 import java.util.*;
 
 
@@ -41,19 +43,19 @@ public class Arraylist {
 
     public static void addEmployee()
     {
-        System.out.print("Enter Employee ID: ");
+        System.out.print("Enter Collections.Employee ID: ");
         int id = sc.nextInt();
         sc.nextLine();
 
-        System.out.print("Enter Employee Name: ");
+        System.out.print("Enter Collections.Employee Name: ");
         String name = sc.nextLine();
 
-        System.out.print("Enter Employee Salary: ");
+        System.out.print("Enter Collections.Employee Salary: ");
         double salary = sc.nextDouble();
 
         Employee newEmployee = new Employee(id, name, salary);
         employee.add(newEmployee);
-        System.out.println("Employee added successfully!\n");
+        System.out.println("Collections.Employee added successfully!\n");
     }
     public static void displayDetails()
     {
@@ -70,39 +72,39 @@ public class Arraylist {
     }
     public static void updateDetails()
     {
-        System.out.print("Enter Employee ID to update: ");
+        System.out.print("Enter Collections.Employee ID to update: ");
         int id = sc.nextInt();
         sc.nextLine();
-        System.out.print("Enter updated Employee name: ");
+        System.out.print("Enter updated Collections.Employee name: ");
         String emp_name = sc.nextLine();
-        System.out.print("Enter updated Employee salary: ");
+        System.out.print("Enter updated Collections.Employee salary: ");
         double sal = sc.nextDouble();
 
         for (Employee emp : employee) {
             if (emp.getId() == id) {
                 emp.setName(emp_name);
                 emp.setSalary(sal);
-                System.out.println("Employee updated.");
+                System.out.println("Collections.Employee updated.");
                 return;
             }
         }
-        System.out.println("Employee not found for update.");
+        System.out.println("Collections.Employee not found for update.");
     }
 
     public static void delete()
     {
-        System.out.print("Enter Employee ID to delete: ");
+        System.out.print("Enter Collections.Employee ID to delete: ");
         int id = sc.nextInt();
         Iterator<Employee> iterator = employee.iterator();
         while (iterator.hasNext()) {
             Employee emp = iterator.next();
             if (emp.getId() == id) {
                 iterator.remove();
-                System.out.println("Employee deleted.\n");
+                System.out.println("Collections.Employee deleted.\n");
                 return;
             }
         }
-        System.out.println("Employee not found for deletion.");
+        System.out.println("Collections.Employee not found for deletion.");
     }
 
 
@@ -111,13 +113,13 @@ public class Arraylist {
 
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("\nWelcome to Employee Management System");
-            System.out.println("1.Add Employee Details");
-            System.out.println("2.Display Employee Details");
-            System.out.println("3.Update Employee Details");
-            System.out.println("4.Delete Employee Details");
+            System.out.println("\nWelcome to Collections.Employee Management System");
+            System.out.println("1.Add Collections.Employee Details");
+            System.out.println("2.Display Collections.Employee Details");
+            System.out.println("3.Update Collections.Employee Details");
+            System.out.println("4.Delete Collections.Employee Details");
             System.out.println("5.Exit");
-            
+
             System.out.print("Enter choice:");
             int ch = sc.nextInt();
             switch (ch) {

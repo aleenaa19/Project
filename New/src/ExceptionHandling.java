@@ -24,7 +24,7 @@ public class ExceptionHandling {
                 }
                 for (int j = 0; j < i; j++) {
                     if (employee[j] != null && employee[j].equalsIgnoreCase(name)) {
-                        throw new DuplicateEmployeeFoundException("Employee name '" + name + "' already exists.");
+                        throw new DuplicateEmployeeFoundException("Collections.Employee name '" + name + "' already exists.");
                     }
                 }
 
