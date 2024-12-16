@@ -12,18 +12,12 @@ public class Linklist {
         while (!list.isEmpty()) {
             String call = list.remove();
             System.out.println("Processing:" + call);
-            if (!list.isEmpty()) {
-                System.out.println("Calls to be processed:");
-                for (String remaining : list) {
-                    System.out.println(remaining);
-                }
-            }
-            else
-            {
-                System.out.println("All calls processed");
-            }
+            System.out.println("Calls to be processed:" + list);
         }
-    }
+        System.out.println("All calls processed");
 
+    }
 }
+
+
 
