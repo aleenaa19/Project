@@ -1,8 +1,7 @@
 package Collections;
 
+
 import java.util.*;
-
-
  class Employee
 {
     int id;
@@ -31,7 +30,6 @@ import java.util.*;
 
     public void display() {
         System.out.println("ID: " + id + ", Name: " + name + ", Salary: " + salary);
-        //System.out.println("\n");
     }
 }
 
