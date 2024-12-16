@@ -34,7 +34,7 @@ class Member extends User {
                 case 2:
                     System.out.print("Enter the book ID to issue: ");
                     int bookId = sc.nextInt();
-                    for (Books book : library.getItems()) {
+                    for (Books book : library.getItems().keySet()) {
                         if (book.getId() == bookId) {
                             if (book.isBookAvailability()) {
                                 System.out.println("The book has been issued.");
@@ -49,7 +49,7 @@ class Member extends User {
                 case 3:
                     System.out.print("Enter the book ID to return: ");
                     bookId = sc.nextInt();
-                    for (Books book : library.getItems()) {
+                    for (Books book : library.getItems().keySet()) {
                         if (book.getId() == bookId) {
                             if (book.isBookAvailability()) {
                                 System.out.println("The book has been returned.");
@@ -79,7 +79,7 @@ class Member extends User {
     }
 
     public boolean search(String title) {
-        for (Books book : library.getItems()) {
+        for (Books book : library.getItems().keySet()) {
             if (book.getTitle().equalsIgnoreCase(title)) {
                 return true;
             }
