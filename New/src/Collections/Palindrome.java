@@ -1,4 +1,7 @@
+/*Using ArrayDequeue class check whether a string is palindrome or not
+*/
 package Collections;
+
 import java.util.*;
 import java.util.ArrayDeque;
 
