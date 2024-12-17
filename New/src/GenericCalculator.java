@@ -19,19 +19,19 @@ any numerical data type values as parameter
         return (T) divNumbers(num1, num2);
     }
 
-     Number addNumbers(Number num1, Number num2) {
+    private Number addNumbers(Number num1, Number num2) {
         return num1.doubleValue() + num2.doubleValue();
     }
 
-     Number subNumbers(Number num1, Number num2) {
+    private Number subNumbers(Number num1, Number num2) {
         return num1.doubleValue() - num2.doubleValue();
     }
 
-     Number mulNumbers(Number num1, Number num2) {
+    private Number mulNumbers(Number num1, Number num2) {
         return num1.doubleValue() * num2.doubleValue();
     }
 
-     Number divNumbers(Number num1, Number num2) {
+    private Number divNumbers(Number num1, Number num2) {
         if (num2.doubleValue() == 0) {
             throw new ArithmeticException("Division by zero not allowed");
         }
