@@ -5,12 +5,14 @@ public class Books {
     private final String bookTitle;
     private final String bookAuthor;
     private boolean bookAvailability;
+    private int numOfCopies;
 
-    public Books(int bookId, String bookTitle, String bookAuthor, boolean bookAvailability) {
+    public Books(int bookId, String bookTitle, String bookAuthor, boolean bookAvailability,int numOfCopies) {
         this.bookId = bookId;
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
         this.bookAvailability = bookAvailability;
+        this.numOfCopies=numOfCopies;
     }
 
     // private static boolean bookIssued;
@@ -36,11 +38,10 @@ public class Books {
     public void setBookAvailability(boolean bookAvailability) {
         this.bookAvailability = bookAvailability;
     }
-/*
-    public static void setBookIssued(boolean bookIssued) {
-        Books.bookIssued = bookIssued;
+    public int getNumOfCopies()
+    {
+        return numOfCopies;
     }
-    */
 
 
 

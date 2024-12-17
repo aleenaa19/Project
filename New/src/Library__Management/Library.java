@@ -22,8 +22,8 @@ class Library {
 
 */
         items = new HashMap<>();
-        Books book1 = new Books(101, "The Great Gatsby", "F. Scott Fitzgerald", true);
-        Books book2 = new Books(102, "To Kill a Mockingbird", "Harper Lee", true);
+        Books book1 = new Books(101, "The Great Gatsby", "F. Scott Fitzgerald", true,2);
+        Books book2 = new Books(102, "To Kill a Mockingbird", "Harper Lee", true,3);
 
         items.put(book1, 2);
         items.put(book2, 3);

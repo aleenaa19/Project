@@ -37,7 +37,9 @@ class Librarian extends User {
                     String author = sc.nextLine();
                     System.out.print("Enter book ID: ");
                     int bookId = sc.nextInt();
-                    Books newBook = new Books(bookId,title,author,true);
+                    System.out.print("Enter number of copies: ");
+                    int copies = sc.nextInt();
+                    Books newBook = new Books(bookId,title,author,true,copies);
                     library.addBook(newBook);
                     System.out.println("Book added: " + newBook);
                     break;
