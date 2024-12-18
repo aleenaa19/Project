@@ -1,4 +1,4 @@
-/*using stream map convert all elements in a string array to upper case?
+package StreamAPI;/*using stream map convert all elements in a string array to upper case?
 */
 
 import java.util.Arrays;

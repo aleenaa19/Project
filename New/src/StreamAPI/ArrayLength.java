@@ -1,4 +1,4 @@
-/* 3.Using stream map find the length of all elements in the string array?
+package StreamAPI;/* 3.Using stream map find the length of all elements in the string array?
  */
 
 import java.util.Arrays;
