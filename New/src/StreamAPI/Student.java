@@ -52,21 +52,20 @@ public class Student {
 class Main {
     public static void main(String[] args) {
         List<Student> students = Arrays.asList(
-                new Student(1, "Aleena", "Female", "10A", "A+"),
+                new Student(1, "Aleena" , "Female", "10A", "A+"),
                 new Student(2, "Sherin", "Female", "10B", "A"),
                 new Student(3, "John", "Male", "10A", "C"),
-                new Student(4, "Roy", "Male", "10C", "A"),
-                new Student(5, "Gauri", "Female", "10B", "B")
+                new Student(4, "Roy", "Male", "10C", "B+"),
+                new Student(5, "Gauri", "Female", "10B", "A")
         );
         Predicate<Student> isFemale = s -> "Female".equals(s.getGender());
         Predicate<Student> Grade = s -> "A+".equals(s.getGrade()) ||
                                     "A".equals(s.getGrade()) || "B".equals(s.getGrade());
 
-        System.out.println("ALL FEMALE STUDENTS");
+        System.out.println("All female student");
         students.stream().filter(isFemale).forEach(System.out::println);
-        System.out.println("ALL STUDENTS WITH GRADE A+,A and B");
+        System.out.println("\nAll students with grade A+,A and B");
         students.stream().filter(Grade).forEach(System.out::println);
     }
 }
-
 
