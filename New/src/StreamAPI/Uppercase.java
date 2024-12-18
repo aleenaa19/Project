@@ -1,6 +1,6 @@
-package StreamAPI;/*using stream map convert all elements in a string array to upper case?
+/*using stream map convert all elements in a string array to upper case?
 */
-
+package StreamAPI;
 import java.util.Arrays;
 
 public class Uppercase {
