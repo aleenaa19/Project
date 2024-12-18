@@ -63,9 +63,9 @@ class Main {
                                     "A".equals(s.getGrade()) || "B".equals(s.getGrade());
 
         System.out.println("All female student");
-        students.stream().filter(isFemale).forEach(System.out::println);
+        students.parallelStream().filter(isFemale).forEach(System.out::println);
         System.out.println("\nAll students with grade A+,A and B");
-        students.stream().filter(Grade).forEach(System.out::println);
+        students.parallelStream().filter(Grade).forEach(System.out::println);
     }
 }
 
