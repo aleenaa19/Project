@@ -1,6 +1,6 @@
-package StreamAPI;/*1.using stream map function multiply all elements in an array by 3?
+/*1.using stream map function multiply all elements in an array by 3?
  */
-
+package StreamAPI;
 import java.util.Arrays;
 
 public class Multiply {
